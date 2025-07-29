@@ -61,6 +61,11 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// Initialize EmailJS
+(function() {
+    emailjs.init("pFYrcsRvAxeympGTI");
+})();
+
 // Contact Form Handling
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
@@ -85,9 +90,39 @@ if (contactForm) {
             return;
         }
         
-        // Simulate form submission (replace with actual form handling)
-        showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
-        this.reset();
+        // Show sending notification
+        showNotification('Sending your message...', 'info');
+        
+        // Send email using EmailJS
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            subject: subject,
+            message: message,
+            to_email: 'fdsimoes92@gmail.com'
+        };
+        
+        // Send email using EmailJS
+        emailjs.send('service_f7ihtqq', 'template_ilr0pil', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
+                contactForm.reset();
+            }, function(error) {
+                console.log('FAILED...', error);
+                let errorMessage = 'Sorry, there was an error sending your message. ';
+                
+                if (error.status === 412) {
+                    errorMessage += 'Email service configuration issue. ';
+                } else if (error.status === 400) {
+                    errorMessage += 'Invalid email format. ';
+                } else if (error.status === 429) {
+                    errorMessage += 'Too many requests. Please try again later. ';
+                }
+                
+                errorMessage += 'Please contact me directly at fdsimoes92@gmail.com';
+                showNotification(errorMessage, 'error');
+            });
     });
 }
 
