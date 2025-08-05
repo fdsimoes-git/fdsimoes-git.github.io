@@ -217,14 +217,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Typing effect for hero title
-function typeWriter(element, text, speed = 100) {
+// Simple typing effect for hero title
+function typeWriter(element, htmlText, speed = 100) {
+    console.log('typeWriter called with:', htmlText);
+    element.classList.add('typing');
+    
+    // For now, let's just use simple text and add the highlight at the end
+    const simpleText = "Hi, I'm Felipe Simões";
+    
     let i = 0;
     element.innerHTML = '';
     
     function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
+        if (i < simpleText.length) {
+            const currentText = simpleText.substring(0, i + 1);
+            
+            // Apply highlighting when we reach Felipe Simões
+            if (currentText.length >= 8 && currentText.includes("Felipe")) {
+                const beforeName = "Hi, I'm ";
+                const nameText = currentText.substring(8); // everything after "Hi, I'm "
+                element.innerHTML = beforeName + '<span class="highlight">' + nameText + '</span>';
+            } else {
+                element.innerHTML = currentText;
+            }
+            
             i++;
             setTimeout(type, speed);
         }
@@ -237,10 +253,15 @@ function typeWriter(element, text, speed = 100) {
 document.addEventListener('DOMContentLoaded', () => {
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) {
-        const originalText = heroTitle.textContent;
+        const originalText = heroTitle.getAttribute('data-text');
+        console.log('Hero title found:', heroTitle);
+        console.log('Original text:', originalText);
         setTimeout(() => {
+            console.log('Starting typing effect...');
             typeWriter(heroTitle, originalText, 50);
         }, 500);
+    } else {
+        console.log('Hero title not found');
     }
 });
 
