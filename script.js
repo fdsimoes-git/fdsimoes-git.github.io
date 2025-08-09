@@ -31,11 +31,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
+        navbar.classList.remove('scrolled');
     }
 });
 
@@ -280,7 +278,11 @@ style.textContent = `
     }
     
     .nav-link.active {
-        color: #4f46e5 !important;
+        color: #0ea5e9 !important;
+    }
+    
+    .navbar.scrolled .nav-link.active {
+        color: #0369a1 !important;
     }
     
     .nav-link.active::after {
@@ -290,7 +292,11 @@ style.textContent = `
         left: 0;
         right: 0;
         height: 2px;
-        background: #4f46e5;
+        background: #0ea5e9;
+    }
+    
+    .navbar.scrolled .nav-link.active::after {
+        background: #0369a1;
     }
     
     .nav-link {
