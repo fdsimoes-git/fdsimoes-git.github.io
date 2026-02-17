@@ -3,162 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felipe Simões - Personal Portfolio & CV</title>
-    <meta name="description" content="Personal portfolio and CV of Felipe Simões - Sr. Data Scientist">
+    <title>Felipe Simões — Applied Scientist</title>
+    <meta name="description" content="Applied Scientist at Microsoft. AI Engineering, LLMs, and Machine Learning.">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
+    <!-- Grain texture overlay -->
+    <div class="grain" aria-hidden="true"></div>
+
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Felipe Simões</a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">fs<span class="dot">.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
-        <div class="hero-container">
+        <div class="container hero-grid">
             <div class="hero-content">
-                <h1 class="hero-title" data-text="Hi, I'm <span class='highlight'>Felipe Simões</span>">
-                    Hi, I'm <span class="highlight">Felipe Simões</span>
-                </h1>
-                <p class="hero-subtitle">Senior Data Scientist & AI Engineering Specialist</p>
-                <p class="hero-description">
-                    Passionate about GenAI, machine learning, and data science with 8+ years of experience. 
-                    Currently working at Uber, specializing in AI engineering and statistical process control.
+                <span class="hero-badge animate-in">Applied Scientist at Microsoft</span>
+                <h1 class="hero-name animate-in">Felipe<br><span class="accent">Simões</span></h1>
+                <p class="hero-desc animate-in">
+                    Building AI applications and intelligent agents on Microsoft's
+                    Copilot Tuning team. Passionate about LLMs, machine learning,
+                    and solving real-world problems with AI.
                 </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="#projects" class="btn btn-secondary">View My Work</a>
+                <div class="hero-cta animate-in">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="#projects" class="btn btn-ghost">View Projects</a>
+                </div>
+                <div class="hero-social animate-in">
+                    <a href="https://github.com/fdsimoes-git" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/felipedos92/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://scholar.google.com/citations?user=quCAMJ4AAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
                 </div>
             </div>
-            <div class="hero-image">
+            <div class="hero-visual animate-in">
                 <div class="hero-photo">
                     <img src="citations.jpeg" alt="Felipe Simões" id="profile-photo">
+                    <div class="photo-frame"></div>
                 </div>
             </div>
         </div>
+        <div class="scroll-cue">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- About -->
+    <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
+            <div class="section-head">
+                <span class="section-num">01</span>
+                <h2>About</h2>
+                <div class="head-line"></div>
+            </div>
+            <div class="about-grid">
                 <div class="about-text">
                     <p>
-                        I'm a Data Scientist, currently working at Uber, with a background in AI engineering, 
-                        machine learning, and statistics. My journey in technology started 
-                        in 2018 and since then, I've been dedicated to applying cutting-edge GenAI 
-                        technologies and data science methodologies to solve real-world problems. I'm also a 
-                        Master's student in Cybersecurity at the University of London.
+                        I'm an Applied Scientist at Microsoft, working on the Copilot Tuning team
+                        where I develop AI applications and agents that enhance Microsoft Copilot's
+                        capabilities. My focus is on customizing and fine-tuning AI agents using large
+                        language models (LLMs) and machine learning techniques to deliver tailored
+                        enterprise solutions.
                     </p>
                     <p>
-                        I hold a Master's degree in Production Engineering from UNESP. When I'm not 
-                        working with data, you can find me contributing to open-source projects, conducting 
-                        academic research, or exploring new AI technologies.
+                        Before joining Microsoft, I spent nearly 4 years at Uber as a Data Scientist
+                        and Senior Data Scientist, working with GenAI model applications and machine
+                        learning-based products. I hold a Master's degree in Production Engineering
+                        from UNESP, with published research in peer-reviewed journals, and I'm
+                        currently pursuing an MSc in Cybersecurity at the University of London.
                     </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>8+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat">
-                            <h3>2</h3>
-                            <p>
-                                Published Articles in<br>
-                                peer-reviewed journals
-                            </p>
-                        </div>
-                        <div class="stat">
-                            <h3>4</h3>
-                            <p>GitHub Projects</p>
-                        </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-num">8+</span>
+                        <span class="stat-label">Years of<br>Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">3</span>
+                        <span class="stat-label">Published<br>Articles</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">4</span>
+                        <span class="stat-label">Open Source<br>Projects</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
+    <!-- Experience -->
+    <section id="experience" class="section section-alt">
         <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">Feb 2024 - Present</div>
-                    <div class="timeline-content">
+            <div class="section-head">
+                <span class="section-num">02</span>
+                <h2>Experience</h2>
+                <div class="head-line"></div>
+            </div>
+            <div class="exp-list">
+                <article class="exp-item">
+                    <div class="exp-date">Dec 2025 — Present</div>
+                    <div class="exp-body">
+                        <h3>Applied Scientist</h3>
+                        <h4>Microsoft <span class="sep">&middot;</span> Brazil</h4>
+                        <p>Applied Scientist on the Copilot Tuning team, developing AI applications and agents that enhance Microsoft Copilot's capabilities.</p>
+                        <ul>
+                            <li>Lead customization and fine-tuning of AI agents based on customer needs</li>
+                            <li>Design and implement ML pipelines for model fine-tuning with LLMs</li>
+                            <li>Collaborate with cross-functional teams to translate business requirements into scalable AI solutions</li>
+                            <li>Conduct experiments and evaluations to measure agent quality and improve model outputs</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="exp-item">
+                    <div class="exp-date">Feb 2024 — Dec 2025</div>
+                    <div class="exp-body">
                         <h3>Senior Data Scientist</h3>
-                        <h4>Uber - Brazil</h4>
-                        <p>
-                            Leading AI engineering initiatives and GenAI model applications focusing on safety, 
-                            a core business area at Uber. Design AI applications and develop data pipelines.
-                        </p>
+                        <h4>Uber <span class="sep">&middot;</span> Brazil</h4>
+                        <p>Led AI engineering initiatives and GenAI model applications focusing on safety, a core business area at Uber.</p>
                         <ul>
                             <li>Spearheaded AI engineering initiatives with OpenAI and VertexAI gateways</li>
                             <li>Developed prompt engineering techniques for GenAI model optimization</li>
-                            <li>Conducted A/B tests and ML model performance evaluation (XGBoost)</li>
-                            <li>Built data pipelines using Spark, Hadoop, and Hive</li>
+                            <li>Conducted experimentation with GenAI models</li>
+                            <li>Evaluated model performance metrics aligned with business objectives</li>
                         </ul>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Apr 2022 - Jan 2024</div>
-                    <div class="timeline-content">
+                </article>
+                <article class="exp-item">
+                    <div class="exp-date">Apr 2022 — Feb 2024</div>
+                    <div class="exp-body">
                         <h3>Data Scientist II</h3>
-                        <h4>Uber - Brazil</h4>
-                        <p>
-                            Worked with GenAI model applications and machine learning-based products focusing 
-                            on safety. Collaborated with cross-functional teams to identify ML opportunities.
-                        </p>
+                        <h4>Uber <span class="sep">&middot;</span> Brazil</h4>
+                        <p>Worked with GenAI model applications and ML-based products focusing on safety.</p>
                         <ul>
-                            <li>Designed AI applications and analyzed A/B tests</li>
-                            <li>Defined and evaluated metrics for ML models</li>
-                            <li>Developed data pipelines using Tableau and Looker</li>
-                            <li>Collaborated with teams to size ML model opportunities</li>
+                            <li>Designed and analyzed A/B tests to optimize product features</li>
+                            <li>ML models (XGBoost) performance evaluation</li>
+                            <li>Developed data pipelines using Spark, Hadoop, and Hive</li>
+                            <li>Created impactful visualizations in Tableau and Data Studio</li>
                         </ul>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Jul 2021 - Apr 2022</div>
-                    <div class="timeline-content">
+                </article>
+                <article class="exp-item">
+                    <div class="exp-date">Jun 2021 — Apr 2022</div>
+                    <div class="exp-body">
                         <h3>Data Scientist</h3>
-                        <h4>Liv Up - Brazil</h4>
-                        <p>
-                            Developed ETL models and forecasting solutions to optimize supply chain processes 
-                            and inventory management in the food-tech industry.
-                        </p>
+                        <h4>Liv Up <span class="sep">&middot;</span> Brazil</h4>
+                        <p>Developed ETL models and forecasting solutions to optimize supply chain processes in the food-tech industry.</p>
                         <ul>
                             <li>Developed ETL models in Python to streamline supply chain processes</li>
                             <li>Created sophisticated forecasting models for inventory optimization</li>
@@ -166,208 +178,249 @@
                             <li>Improved software performance with measurable impact on KPIs</li>
                         </ul>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Aug 2018 - May 2021</div>
-                    <div class="timeline-content">
+                </article>
+                <article class="exp-item">
+                    <div class="exp-date">Aug 2018 — May 2021</div>
+                    <div class="exp-body">
                         <h3>Research Engineer</h3>
-                        <h4>UNESP - Brazil</h4>
-                        <p>
-                            Conducted extensive academic research in statistical process control while serving 
-                            as a Statistics Professor for undergraduate students.
-                        </p>
+                        <h4>UNESP <span class="sep">&middot;</span> Brazil</h4>
+                        <p>Conducted academic research in statistical process control while serving as a Statistics Professor.</p>
                         <ul>
                             <li>Developed innovative control charts for statistical process monitoring</li>
-                            <li>Served as Statistics Professor teaching statistical methodologies</li>
-                            <li>Utilized Monte Carlo Markov Chain models and hypothesis testing</li>
-                            <li>Published research articles in peer-reviewed journals</li>
+                            <li>Statistics Professor for undergraduate students</li>
+                            <li>Published research using Monte Carlo Markov Chain models</li>
                         </ul>
                     </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-num">03</span>
+                <h2>Education</h2>
+                <div class="head-line"></div>
+            </div>
+            <div class="edu-grid">
+                <div class="edu-card">
+                    <span class="edu-year">2024 — 2027</span>
+                    <h3>MSc Cyber Security</h3>
+                    <p>University of London</p>
+                    <span class="badge">In Progress</span>
+                </div>
+                <div class="edu-card">
+                    <span class="edu-year">2018 — 2020</span>
+                    <h3>MEng Production Engineering</h3>
+                    <p>UNESP — Guaratinguet&aacute;, Brazil</p>
+                </div>
+                <div class="edu-card">
+                    <span class="edu-year">2011 — 2017</span>
+                    <h3>BSc Production Engineering</h3>
+                    <p>UNESP — Guaratinguet&aacute;, Brazil</p>
+                </div>
+                <div class="edu-card">
+                    <span class="edu-year">2015 — 2016</span>
+                    <h3>BSc Logistics &amp; Supply Chain</h3>
+                    <p>University of Portsmouth — UK</p>
+                    <span class="badge">Exchange</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <!-- Skills -->
+    <section id="skills" class="section section-alt">
         <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="section-head">
+                <span class="section-num">04</span>
+                <h2>Skills &amp; Technologies</h2>
+                <div class="head-line"></div>
+            </div>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming & Data</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">R</span>
-                        <span class="skill-item">SQL</span>
-                        <span class="skill-item">Spark</span>
-                        <span class="skill-item">Hadoop</span>
-                        <span class="skill-item">Hive</span>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI & Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span>LLMs</span>
+                        <span>Generative AI</span>
+                        <span>AI Engineering</span>
+                        <span>Prompt Engineering</span>
+                        <span>Machine Learning</span>
+                        <span>A/B Testing</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-brain"></i> AI & Machine Learning</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">GenAI</span>
-                        <span class="skill-item">Machine Learning</span>
-                        <span class="skill-item">XGBoost</span>
-                        <span class="skill-item">OpenAI</span>
-                        <span class="skill-item">VertexAI</span>
-                        <span class="skill-item">A/B Testing</span>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Programming & Data</h3>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>R</span>
+                        <span>Spark</span>
+                        <span>Hadoop</span>
+                        <span>Hive</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-chart-bar"></i> Analytics & Visualization</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Tableau</span>
-                        <span class="skill-item">Looker</span>
-                        <span class="skill-item">LookML</span>
-                        <span class="skill-item">Statistical Analysis</span>
-                        <span class="skill-item">Hypothesis Testing</span>
-                        <span class="skill-item">Operational Research</span>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Analytics & Visualization</h3>
+                    <div class="skill-tags">
+                        <span>Tableau</span>
+                        <span>Looker</span>
+                        <span>LookML</span>
+                        <span>Statistical Analysis</span>
+                        <span>Operational Research</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- Projects -->
+    <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-head">
+                <span class="section-num">05</span>
+                <h2>Featured Projects</h2>
+                <div class="head-line"></div>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
+                <article class="project-card">
+                    <div class="project-img">
                         <img src="project_1.png" alt="Vision Assistant">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/fdsimoes-git/vision_assistant" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                        <div class="project-hover">
+                            <a href="https://github.com/fdsimoes-git/vision_assistant" target="_blank" rel="noopener" class="project-link-icon">
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="project-content">
+                    <div class="project-info">
                         <h3>Vision Assistant</h3>
-                        <p>Use of a Raspberry Pi camera to describe environment using Gemini models. An innovative AI-powered vision system for environmental description.</p>
-                        <div class="project-tech">
+                        <p>Raspberry Pi camera system that describes environments using Gemini AI models for real-time environmental description.</p>
+                        <div class="project-tags">
                             <span>Python</span>
                             <span>Raspberry Pi</span>
                             <span>Gemini AI</span>
                             <span>Computer Vision</span>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
+                </article>
+                <article class="project-card">
+                    <div class="project-img">
                         <img src="project_2.png" alt="Genetic Algorithm">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://felipe-unesp.shinyapps.io/shiny_apps/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                        <div class="project-hover">
+                            <a href="https://felipe-unesp.shinyapps.io/shiny_apps/" target="_blank" rel="noopener" class="project-link-icon">
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3>Genetic Algorithm for Milk-Run Problem</h3>
-                        <p>An application that uses Genetic Algorithm to solve an NP-hard optimization problem in supply chain logistics, demonstrating advanced operational research techniques.</p>
-                        <div class="project-tech">
+                    <div class="project-info">
+                        <h3>Genetic Algorithm for Milk-Run</h3>
+                        <p>Application using Genetic Algorithm to solve an NP-hard optimization problem in supply chain logistics.</p>
+                        <div class="project-tags">
                             <span>Python</span>
                             <span>Genetic Algorithm</span>
                             <span>Optimization</span>
-                            <span>Supply Chain</span>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
+                </article>
+                <article class="project-card">
+                    <div class="project-img">
                         <img src="project_3.png" alt="R Package">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/fdsimoes/getPi" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                        <div class="project-hover">
+                            <a href="https://github.com/fdsimoes/getPi" target="_blank" rel="noopener" class="project-link-icon">
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3>Steady-State Probability Vector Function in R</h3>
-                        <p>An R package to calculate the steady-state probability vector for a Markov chain model, supporting advanced statistical analysis and research.</p>
-                        <div class="project-tech">
+                    <div class="project-info">
+                        <h3>Steady-State Probability Vector in R</h3>
+                        <p>R package to calculate the steady-state probability vector for Markov chain models in statistical research.</p>
+                        <div class="project-tags">
                             <span>R</span>
                             <span>Markov Chains</span>
                             <span>Statistics</span>
-                            <span>Package Development</span>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
+                </article>
+                <article class="project-card">
+                    <div class="project-img">
                         <img src="project_4.png" alt="Asset Manager">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/fdsimoes-git/asset-management" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                        <div class="project-hover">
+                            <a href="https://github.com/fdsimoes-git/asset-management" target="_blank" rel="noopener" class="project-link-icon">
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="project-content">
+                    <div class="project-info">
                         <h3>Asset Manager</h3>
-                        <p>A LAN website for managing finances with features like charts, encrypted data storage, and expenses bulk upload with AI.</p>
-                        <div class="project-tech">
+                        <p>LAN website for managing finances with charts, encrypted data storage, and AI-powered expenses bulk upload.</p>
+                        <div class="project-tags">
                             <span>Python</span>
                             <span>JavaScript</span>
                             <span>AI Integration</span>
-                            <span>Data Encryption</span>
                             <span>Chart.js</span>
-                            <span>Financial Analytics</span>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Contact -->
+    <section id="contact" class="section section-alt">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
+            <div class="section-head">
+                <span class="section-num">06</span>
+                <h2>Get in Touch</h2>
+                <div class="head-line"></div>
+            </div>
+            <div class="contact-grid">
                 <div class="contact-info">
                     <h3>Let's Connect</h3>
                     <p>
-                        I'm always interested in hearing about new opportunities and interesting projects. 
+                        I'm always interested in hearing about new opportunities and interesting projects.
                         Whether you have a question or just want to say hi, feel free to reach out!
                     </p>
-                    <div class="contact-items">
-                        <div class="contact-item">
+                    <div class="contact-details">
+                        <div class="contact-row">
                             <i class="fas fa-envelope"></i>
                             <div>
-                                <h4>Email</h4>
-                                <p>fdsimoes92@gmail.com</p>
+                                <strong>Email</strong>
+                                <span>fdsimoes92@gmail.com</span>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-row">
+                            <i class="fas fa-location-dot"></i>
                             <div>
-                                <h4>Location</h4>
-                                <p>São Paulo, Brazil</p>
+                                <strong>Location</strong>
+                                <span>São Paulo, Brazil</span>
                             </div>
                         </div>
                     </div>
-                    <div class="social-links">
-                        <a href="https://github.com/fdsimoes-git" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="https://scholar.google.com/citations?user=quCAMJ4AAAAJ&hl=en" class="social-link"><i class="fas fa-graduation-cap"></i></a>
-                        <a href="https://www.linkedin.com/in/felipedos92/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <div class="contact-social">
+                        <a href="https://github.com/fdsimoes-git" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                        <a href="https://scholar.google.com/citations?user=quCAMJ4AAAAJ&hl=en" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i></a>
+                        <a href="https://www.linkedin.com/in/felipedos92/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="text" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <input type="text" name="subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
                 </form>
             </div>
         </div>
@@ -375,14 +428,12 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2024 Felipe Simões. All rights reserved.</p>
-                <p>Built with ❤️ and hosted on GitHub Pages</p>
-            </div>
+        <div class="container footer-inner">
+            <p>&copy; 2026 Felipe Simões</p>
+            <p>Built with care</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
