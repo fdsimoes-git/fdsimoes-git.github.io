@@ -64,7 +64,3 @@ On the **Free plan**, even if the repository is private, the deployed site at `h
 ## Analytics
 
 Site analytics are tracked with [Umami](https://umami.is), a privacy-focused, open source alternative to Google Analytics. The tracking script is included in `index.html`.
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
